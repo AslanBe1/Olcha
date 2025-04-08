@@ -23,7 +23,7 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    # permission_classes = (CrudPermission,)
+    permission_classes = (CrudPermission,)
     filter_backends = (SearchFilter, OrderingFilter)
     search_fields = ('name', 'id')
 
